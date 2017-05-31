@@ -1,12 +1,217 @@
+/* Заглавие */
 h2 {
+  color: #818284;
   text-align: center;
+  font: 500 21px/21px Arial;
+  text-transform: uppercase;
+  margin: 24px 0 42px;
 }
+h2 span {
+  color: #0f76bb;
+}
+
+/* Общие свойства таблицы */
 table {
-  border: 1px solid black;
+  border-top:3px double black;
+  border-left: 1px solid #cbcbcb;
+  border-right: 1px solid #cbcbcb;
   border-collapse: collapse;
   width: 966px;
   margin: 0 auto;
+  font-style: Arial;
+  color: #3f3e40;
 }
-td, th {
-  border: 1px solid black;
+
+/* Параметры шапки таблицы */
+thead tr {
+  height: 105px;
+}
+  
+/* Смещение вниз текста в шапке таблицы */
+thead th:nth-child(n+2):nth-child(-n+8) {	
+  padding-top: 32px;
+  font: bold 16px Arial;
+}
+
+/* Прерывистая вертикальная линия */
+thead th:nth-child(n+5):nth-child(-n+7),
+tbody td:nth-child(n+5):nth-child(-n+7),
+.color-field td {	
+  /* Или с помощью стандартной рамки */
+  border-right: 1px dashed #6d6e70;
+  /* Или же с помощью градиента */
+  /* TODO: сделать градиентную-рамку */
+}
+
+/* Ширина 1-го столбца */
+thead th:nth-child(1) {
+  color: #0f76bb;
+  width: 243px;
+  font: 26px Arial;
+}
+
+/* Иконки для шапки сайта подключаются через фоны */
+thead th:nth-child(2) {
+  background: url(../img/cirle-1.png) no-repeat center 17px;
+}
+thead th:nth-child(3) {
+  background: url(../img/cirle-2.png) no-repeat center 17px;
+}
+thead th:nth-child(4) {
+  background: url(../img/cirle-3.png) no-repeat center 17px;
+}
+thead th:nth-child(5) {
+  background: url(../img/cirle-4.png) no-repeat center 17px;
+}
+thead th:nth-child(6) {
+  background: url(../img/cirle-5.png) no-repeat center 17px;
+}
+thead th:nth-child(7) {
+  background: url(../img/cirle-6.png) no-repeat center 17px;
+}
+thead th:nth-child(8) {
+  background: url(../img/cirle-7.png) no-repeat center 17px;
+}
+
+/* Ширина 2-5 столбцов */
+thead th:nth-child(2),
+thead th:nth-child(3),
+thead th:nth-child(4),
+thead th:nth-child(5) {
+  width: 120px;
+}
+/* Ширина 6-го столбца */
+thead th:nth-child(6) {
+  width: 89px;
+}
+/* Ширина 7-го столбца */
+thead th:nth-child(7) {
+  width: 118px;
+}
+/* Параметры 8-го столбца */
+thead th:nth-child(8) {
+  width: 88px;
+  text-transform: uppercase;
+}
+
+/* Параметры тела таблицы, высота "обычных" полей */
+tbody tr {
+  height: 59px;
+}
+/* Настройки шрифта для полей тела таблицы */
+tbody td {
+  font: 14px Arial;
+  text-shadow: #b2b2b3 1px 1px 0;
+}
+/* Общее смещение для полей первого столбца */
+tbody tr td:first-child {
+  padding-left: 58px;
+}
+/* Выравнивание по центру для полей всех, кроме первого столбца и шапки */
+tbody tr td:nth-child(n+2):nth-child(-n+8) {
+  text-align: center;
+}
+
+/* Иконки для полей 1-го столбца */
+.icon-green {
+  background: url(../img/icon-green.png) no-repeat 18px 12px;	
+}
+.icon-big-green {
+  background: url(../img/icon-big-green.png) no-repeat 12px 13px;
+}
+.icon-red {
+  background: url(../img/icon-red.png) no-repeat 18px 13px;
+}
+/* Параметры первого столбца */
+.pad-first {
+  padding-bottom: 18px;
+  position: relative;
+}
+
+/* Цветное поле-разделитель */
+.color-field {
+  height: 32px;
+  background: #cfd9ee;
+  border-top: 1px solid #3f3e40;
+  border-bottom: 1px solid #dbe3f2;
+  text-transform: uppercase;
+  
+}
+.color-field td {
+  background: none;
+  font: 14px Arial;
+  padding-left: 13px !important;
+  /* Увеличение "жирности" за счет тени */
+  text-shadow: #b2b2b3 1px 0 0;
+}
+/* Итоговая строка */
+.final-field {
+  border-top: 1px solid #3f3e40;
+  height: 66px;
+}
+.final-field td:nth-child(n+2):nth-child(-n+8) {
+  font-size: 18px;
+  text-shadow: none;
+}
+/* Блок "note" */
+.note {
+  border: 1px solid #818284;
+  border-radius: 4px;
+  position: absolute;
+  top: 30px;
+  left: 58px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: #818284;
+  text-shadow: none;
+  padding: 0 5px;
+}
+/* Специфическое свойство для итоговой строки */
+.final-field .note {
+  top: 35px;
+}
+/* Общие свойства как для позитивной, так и для негативной динамики? применяются для span */
+.positive,
+.negative {
+  font-size: 12px;
+  text-shadow: none;
+  padding-left: 8px;
+  position: relative;
+}
+/* Цвет позивной динамики */
+.positive {
+  color: #4a906d;
+}
+.positive:after {
+  content: ''; 
+  position: absolute;
+  left: 5px;
+  bottom: -12px;
+  border: 6px solid transparent;
+  border-bottom: 9px solid #086738;
+}
+/* Негативная динамика */
+.negative {
+  color: #be1e2d;
+}
+.negative:after {
+  content: ''; 
+  position: absolute;
+  left: 5px;
+  bottom: -18px;
+  border: 6px solid transparent;
+  border-top: 9px solid #be1e2d;
+}
+/* Другие свойства для 6,7 колонок */
+.final6,
+.final7 {
+  font-weight: bold;
+}
+.final6:after {
+  left: 40px;
+  bottom: 4px;
+}
+.final7:after {
+  left: 50px;
+  bottom: 4px;
 }
