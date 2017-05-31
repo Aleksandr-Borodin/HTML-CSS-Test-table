@@ -1,0 +1,12 @@
+h2 {
+  text-align: center;
+}
+table {
+  border: 1px solid black;
+  border-collapse: collapse;
+  width: 966px;
+  margin: 0 auto;
+}
+td, th {
+  border: 1px solid black;
+}
