@@ -1,3 +1,14 @@
+/*
+Элементы шапки через их "географическое" расположение;
+.icon-green, .icon-big-green, .icon-red - иконки первой колонки;
+.color-field - цветнаое разделительное поле;
+.final-field - итоговое поле;
+.note - одноименный блок для элементов 1-го столбца;
+.positive - позитивная, зеленая динамика;
+.negative - негативная динамика;
+.final6, .final7 - уточняющие свойства позитивной и негативной динамики для 6,7 столбцов
+*/
+
 /* Заглавие */
 h2 {
   color: #818284;
@@ -25,31 +36,25 @@ table {
 /* Параметры шапки таблицы */
 thead tr {
   height: 105px;
-}
-  
+}  
 /* Смещение вниз текста в шапке таблицы */
 thead th:nth-child(n+2):nth-child(-n+8) {	
   padding-top: 32px;
   font: bold 16px Arial;
 }
-
 /* Прерывистая вертикальная линия */
 thead th:nth-child(n+5):nth-child(-n+7),
 tbody td:nth-child(n+5):nth-child(-n+7),
 .color-field td {	
-  /* Или с помощью стандартной рамки */
+  /* С помощью стандартной рамки */
   border-right: 1px dashed #6d6e70;
-  /* Или же с помощью градиента */
-  /* TODO: сделать градиентную-рамку */
 }
-
 /* Ширина 1-го столбца */
 thead th:nth-child(1) {
   color: #0f76bb;
   width: 243px;
   font: 26px Arial;
 }
-
 /* Иконки для шапки сайта подключаются через фоны */
 thead th:nth-child(2) {
   background: url(../img/cirle-1.png) no-repeat center 17px;
@@ -72,7 +77,6 @@ thead th:nth-child(7) {
 thead th:nth-child(8) {
   background: url(../img/cirle-7.png) no-repeat center 17px;
 }
-
 /* Ширина 2-5 столбцов */
 thead th:nth-child(2),
 thead th:nth-child(3),
@@ -144,6 +148,7 @@ tbody tr td:nth-child(n+2):nth-child(-n+8) {
   /* Увеличение "жирности" за счет тени */
   text-shadow: #b2b2b3 1px 0 0;
 }
+
 /* Итоговая строка */
 .final-field {
   border-top: 1px solid #3f3e40;
@@ -153,6 +158,7 @@ tbody tr td:nth-child(n+2):nth-child(-n+8) {
   font-size: 18px;
   text-shadow: none;
 }
+
 /* Блок "note" */
 .note {
   border: 1px solid #818284;
@@ -170,7 +176,8 @@ tbody tr td:nth-child(n+2):nth-child(-n+8) {
 .final-field .note {
   top: 35px;
 }
-/* Общие свойства как для позитивной, так и для негативной динамики? применяются для span */
+
+/* Общие свойства как для позитивной, так и для негативной динамики */
 .positive,
 .negative {
   font-size: 12px;
@@ -214,4 +221,9 @@ tbody tr td:nth-child(n+2):nth-child(-n+8) {
 .final7:after {
   left: 50px;
   bottom: 4px;
+}
+/* Форматирование стрелочки итогового поля */
+.final-field .final6:after,
+.final-field .final7:after {
+  bottom: 10px;
 }
