@@ -4,7 +4,6 @@
   <link rel = "stylesheet" href = "style/main.css">
   <meta http-equiv = "content-type" content = "text/html; charset=utf-8">
   <title>Test-table</title>
-  <script src="js/prefixfree.min.js"></script>
 </head>
 <body>
   <h2>
@@ -34,54 +33,54 @@
 		<td></td>
 	  </tr>
 	  <tr>
-	    <td>Revenue 1<span>note 1</span></td>
-		<td>20 <span>9</span></td>
-		<td>25 <span>9</span></td>
-		<td>28 <span>2</span></td>
-		<td>26 <span>4</span></td>
-		<td>6</td>
-		<td>1%</td>
-		<td>105 <span>8</span></td>
+	    <td class="icon-green pad-first">Revenue 1<span class="note">note 1</span></td>
+		<td>20 <span class="positive">9</span></td>
+		<td>25 <span class="positive">9</span></td>
+		<td>28 <span class="positive">2</span></td>
+		<td>26 <span class="negative">4</span></td>
+		<td class="positive final6">6</td>
+		<td class="positive final7">1%</td>
+		<td>105 <span class="positive">8</span></td>
 	  </tr>
 	  <tr>
-	    <td>Revenue 2<span>note 2</span></td>
-		<td>100 <span>10</span></td>
-		<td>110 <span>2</span></td>
-		<td>105 <span>5</span></td>
-		<td>120 <span>1</span></td>
-		<td>20</td>
-		<td>1.5%</td>
-		<td>420 <span>3</span></td>
+	    <td class="icon-green pad-first">Revenue 2<span class="note">note 2</span></td>
+		<td>100 <span class="positive">10</span></td>
+		<td>110 <span class="negative">2</span></td>
+		<td>105 <span class="negative">5</span></td>
+		<td>120 <span class="negative">1</span></td>
+		<td class="positive final6">20</td>
+		<td class="positive final7">1.5%</td>
+		<td>420 <span class="negative">3</span></td>
 	  </tr>
 	  <tr>
-	    <td>Revenue 3<span>note 3</span></td>
-		<td>50 <span>3</span></td>
-		<td>70 <span>5</span></td>
-		<td>60 <span>7</span></td>
-		<td>65 <span>2</span></td>
-		<td>15</td>
-		<td>1.2%</td>
-		<td>230 <span>10</span></td>
+	    <td class="icon-green pad-first">Revenue 3<span class="note">note 3</span></td>
+		<td>50 <span class="negative">3</span></td>
+		<td>70 <span class="positive">5</span></td>
+		<td>60 <span class="positive">7</span></td>
+		<td>65 <span class="positive">2</span></td>
+		<td class="positive final6">15</td>
+		<td class="positive final7">1.2%</td>
+		<td>230 <span class="positive">10</span></td>
 	  </tr>
 	  <tr>
-	    <td>Revenue 4<span>note 4</span></td>
-		<td>h1 <span>m</span></td>
-		<td>h2 <span>m</span></td>
-		<td>h3 <span>m</span></td>
-		<td>h4 <span>m</span></td>
+	    <td class="icon-green pad-first">Revenue 4<span class="note">note 4</span></td>
+		<td>h1 <span class="positive">m</span></td>
+		<td>h2 <span class="positive">m</span></td>
+		<td>h3 <span class="positive">m</span></td>
+		<td>h4 <span class="negative">m</span></td>
 		<td></td>
 		<td></td>
-		<td>h <span>m</span></td>
+		<td>h <span class="positive">m</span></td>
 	  </tr>
-	  <tr>
-	    <td>Total Revenue<span>notes</span></td>
+	  <tr class="final-field">
+	    <td class="icon-big-green pad-first">Total Revenue<span class="note">notes</span></td>
 		<td>150</td>
 		<td>170</td>
 		<td>190</td>
 		<td>230</td>
-		<td>80</td>
-		<td>2.3</td>
-		<td>850<span>30</span></td>
+		<td class="positive final6">80</td>
+		<td class="negative final7">2.3</td>
+		<td>850<span class="positive">30</span></td>
 	  </tr>
 	  <tr class="color-field">
 	    <td colspan=5>Expenses section</td>
@@ -90,36 +89,37 @@
 		<td></td>
 	  </tr>
 	  <tr>
-	    <td>Expense 1<span>note 1</span></td>
-		<td>20 <span>9</span></td>
-		<td>25 <span>9</span></td>
-		<td>28 <span>2</span></td>
-		<td>26 <span>4</span></td>
-		<td>6</td>
-		<td>1%</td>
-		<td>105 <span>8</span></td>
+	    <td class="icon-red pad-first">Expense 1<span class="note">note 1</span></td>
+		<td>20 <span class="positive">9</span></td>
+		<td>25 <span class="positive">9</span></td>
+		<td>28 <span class="positive">2</span></td>
+		<td>26 <span class="negative">4</span></td>
+		<td class="positive final6">6</td>
+		<td class="positive final7">1%</td>
+		<td>105 <span class="positive">8</span></td>
 	  </tr>
 	  <tr>
-	    <td>Expense 2<span>note 2</span></td>
-		<td>100 <span>10</span></td>
-		<td>110 <span>2</span></td>
-		<td>105 <span>5</span></td>
-		<td>120 <span>1</span></td>
-		<td>20</td>
-		<td>1.5%</td>
-		<td>420 <span>3</span></td>
+	    <td class="icon-red pad-first">Expense 2<span class="note">note 2</span></td>
+		<td>100 <span class="positive">10</span></td>
+		<td>110 <span class="negative">2</span></td>
+		<td>105 <span class="negative">5</span></td>
+		<td>120 <span class="negative">1</span></td>
+		<td class="positive final6">20</td>
+		<td class="positive final7">1.5%</td>
+		<td>420 <span class="negative">3</span></td>
 	  </tr>
 	  <tr>
-	    <td>Expense 3<span>note 3</span></td>
-		<td>50 <span>3</span></td>
-		<td>70 <span>5</span></td>
-		<td>60 <span>7</span></td>
-		<td>65 <span>2</span></td>
-		<td>15</td>
-		<td>1.2%</td>
-		<td>230 <span>10</span></td>
+	    <td class="icon-red pad-first">Expense 3<span class="note">note 3</span></td>
+		<td>50 <span class="negative">3</span></td>
+		<td>70 <span class="positive">5</span></td>
+		<td>60 <span class="positive">7</span></td>
+		<td>65 <span class="positive">2</span></td>
+		<td class="positive final6">15</td>
+		<td class="positive final7">1.2%</td>
+		<td>230 <span class="positive">10</span></td>
 	  </tr>
 	</tbody>
   </table>
+  <img src="Test.png" alt="Картинка 1">
 </body>
 </html>
